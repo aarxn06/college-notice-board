@@ -7,11 +7,13 @@ pipeline {
         timestamps()
     }
 
+    
     environment {
-        PATH+DOCKER = 'C:\\Users\\Aaron Patric Johnson\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin'
+        PATH = "C:\\Users\\Aaron Patric Johnson\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin;${env.PATH}"
         IMAGE_NAME = 'aarxn06/college-notice-board'
         DEPLOYMENT_NAME = 'college-notice-board'
     }
+
 
     stages {
         stage('Clone Code') {
